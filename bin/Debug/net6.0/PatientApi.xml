@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PatientApi</name>
+    </assembly>
+    <members>
+        <member name="M:PatientApi.Controllers.PatientsController.GetPatients">
+            <summary>
+            Retrieves a list of all patients.
+            </summary>
+            <returns>List of all patients</returns>
+            <response code="200">Returns the list of patients</response>
+        </member>
+        <member name="M:PatientApi.Controllers.PatientsController.GetPatient(System.Guid)">
+            <summary>
+            Retrieves a patient by their ID.
+            </summary>
+            <param name="id">The unique identifier of the patient</param>
+            <returns>A patient object</returns>
+            <response code="200">Returns the patient</response>
+            <response code="404">Patient not found</response>
+        </member>
+        <member name="M:PatientApi.Controllers.PatientsController.CreatePatient(PatientApi.Models.Patient)">
+            <summary>
+            Creates a new patient.
+            </summary>
+            <param name="patient">The patient data</param>
+            <returns>Created patient</returns>
+            <response code="201">The patient was created successfully</response>
+        </member>
+        <member name="M:PatientApi.Controllers.PatientsController.UpdatePatient(System.Guid,PatientApi.Models.Patient)">
+            <summary>
+            Updates an existing patient.
+            </summary>
+            <param name="id">The unique identifier of the patient</param>
+            <param name="patient">The updated patient data</param>
+            <returns>Empty response</returns>
+            <response code="204">Patient updated successfully</response>
+            <response code="400">Invalid ID</response>
+            <response code="404">Patient not found</response>
+        </member>
+        <member name="M:PatientApi.Controllers.PatientsController.DeletePatient(System.Guid)">
+            <summary>
+            Deletes a patient by ID.
+            </summary>
+            <param name="id">The unique identifier of the patient</param>
+            <returns>Empty response</returns>
+            <response code="204">Patient deleted successfully</response>
+            <response code="404">Patient not found</response>
+        </member>
+        <member name="M:PatientApi.Controllers.PatientsController.SearchByBirthDate(System.String)">
+            <summary>
+            Searches patients by birthDate using FHIR-style date prefixes (e.g., gt, lt, eq).
+            </summary>
+            <param name="birthDate">Date with prefix (e.g., eq2024-01-01)</param>
+            <returns>List of patients</returns>
+            <response code="200">Returns the list of patients</response>
+            <response code="400">Invalid date format or prefix</response>
+        </member>
+    </members>
+</doc>

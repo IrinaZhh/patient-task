@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "IIW1t+50CACs0mfmSSQ6DBUDGBAdHam3J0zHlTzpz34=",
+  "Source": "PatientApi",
+  "BasePath": "_content/PatientApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
